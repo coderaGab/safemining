@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import React from "react";
 import { 
   ArrowRight, 
   Menu, 
@@ -806,6 +807,28 @@ const NextSteps = () => {
 };
 
 const Contact = () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "377acf8a-8814-41ce-b0f8-641aab78d253");
+    formData.append("subject", "Novo contato - Safe Mining");
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Mensagem enviada com sucesso!");
+      e.target.reset();
+    } else {
+      alert("Erro ao enviar.");
+    }
+  };
   return (
     <section id="contact" className="section-padding bg-brand-bg">
       <motion.div 
@@ -875,15 +898,11 @@ const Contact = () => {
 
           {/* Right Column - Form */}
           <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
-            <h3 className="text-2xl font-serif font-bold text-white mb-8">Envie uma mensagem</h3>
-            <form 
-  action="https://api.web3forms.com/submit" 
-  method="POST" 
-  className="space-y-6"
->
+            <h3 className="text-2xl font-serif font-bold text-white mb-8">Envie uma mensagem</h3>      
+  <form onSubmit={handleSubmit} className="space-y-6">
 
-  <input type="hidden" name="access_key" value="377acf8a-8814-41ce-b0f8-641aab78d253" />
-  <input type="hidden" name="subject" value="Novo contato - Safe Mining" />
+  {/* Anti-spam */}
+  <input type="checkbox" name="botcheck" className="hidden" />
 
   <div className="space-y-2">
     <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Nome completo</label>
