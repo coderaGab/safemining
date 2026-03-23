@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import fundo from "./assets/fundo.jpg";
 import { 
   ArrowRight, 
   Menu, 
@@ -147,7 +148,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: 'url("https://images.unsplash.com/photo-1579389083078-4e7018379f7e?auto=format&fit=crop&q=80&w=2070")',
+          backgroundImage: 'url(${fundo});',
         }}
       ></div>
       
