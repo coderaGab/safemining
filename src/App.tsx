@@ -4,9 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import React from "react";
-import { 
+import { motion, AnimatePresence } from 'framer-motion';
   ArrowRight, 
   Menu, 
   X, 
@@ -158,7 +156,6 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-brand-bg">
       
-      {/* Background */}
       <div 
         className="absolute inset-0 opacity-40 bg-cover bg-center"
         style={{ backgroundImage: "url('/fundo.jpg')" }}
@@ -168,10 +165,8 @@ const Hero = () => {
 
       <div className="container-max relative z-10 text-center">
         
-        {/* LOGO + NOME */}
         <div className="flex items-center justify-center space-x-6 mb-6">
           <img src="/logo.png" className="h-20 md:h-28" />
-
           <span className="text-4xl md:text-6xl font-bold text-white">
             Safe <span className="text-brand-accent">Mining</span>
           </span>
@@ -188,6 +183,20 @@ const Hero = () => {
         <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
           Solicitar Consultoria
         </a>
+
+        {/* STATS AGORA CORRETAMENTE AQUI */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
+          {[
+            { val: "500", label: "Processos Monitorados" },
+            { val: "24/7", label: "Monitoramento Contínuo" },
+            { val: "100%", label: "Conformidade Regulatória" }
+          ].map((stat, i) => (
+            <div key={i} className="bg-brand-card/40 p-6 rounded-xl text-center">
+              <p className="text-3xl font-bold text-white">{stat.val}</p>
+              <p className="text-sm text-white/60">{stat.label}</p>
+            </div>
+          ))}
+        </div>
 
       </div>
     </section>
@@ -949,55 +958,25 @@ const Footer = () => {
   return (
     <footer className="bg-brand-bg text-brand-text py-24 border-t border-white/5">
       <div className="container-max">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
-          <div className="lg:col-span-5">
-            <div className="flex items-center space-x-3 mb-6">
-  <img src="/logo.png" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</div>
-              </div>
-              <span className="ml-4 text-2xl font-bold tracking-tight text-white">Safe <span className="text-brand-accent">Mining</span></span>
-            </div>
-            <p className="text-brand-text-muted text-lg leading-relaxed max-w-sm">
-              Inteligência técnica e jurídica integrada para a gestão estratégica de ativos minerários em todo o território nacional.
-            </p>
+
+        <div className="mb-10">
+          <div className="flex items-center space-x-3 mb-4">
+            <img src="/logo.png" className="h-10" />
+            <span className="text-xl font-bold text-white">
+              Safe <span className="text-brand-accent">Mining</span>
+            </span>
           </div>
 
-          <div className="lg:col-span-2">
-            <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Navegação</h4>
-            <ul className="space-y-4 text-brand-text-muted">
-              <li><a href="#about" className="hover:text-brand-accent transition-colors">Sobre</a></li>
-              <li><a href="#services" className="hover:text-brand-accent transition-colors">Serviços</a></li>
-              <li><a href="#tech" className="hover:text-brand-accent transition-colors">Tecnologia</a></li>
-              <li><a href="#risks" className="hover:text-brand-accent transition-colors">Riscos</a></li>
-              <li><a href="#differentials" className="hover:text-brand-accent transition-colors">Diferenciais</a></li>
-              <li><a href="#team" className="hover:text-brand-accent transition-colors">Quem Somos</a></li>
-              <li><a href="#contact" className="hover:text-brand-accent transition-colors">Contato</a></li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Social</h4>
-            <ul className="space-y-4 text-brand-text-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">YouTube</a></li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-3">
-            <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Legal</h4>
-            <ul className="space-y-4 text-brand-text-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Privacidade</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Termos</a></li>
-            </ul>
-          </div>
+          <p className="text-brand-text-muted max-w-sm">
+            Inteligência técnica e jurídica integrada para mineração.
+          </p>
         </div>
-        
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text-muted/50">
-          <p>© 2026 SAFE MINING. ALL RIGHTS RESERVED.</p>
-          <p className="mt-4 md:mt-0">DEVELOPED BY CODERA &gt;&gt;</p>
+
+        <div className="pt-12 border-t border-white/5 text-xs text-white/40 flex justify-between">
+          <p>© 2026 SAFE MINING</p>
+          <p>Developed by Codera</p>
         </div>
+
       </div>
     </footer>
   );
