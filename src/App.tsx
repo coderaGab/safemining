@@ -100,11 +100,11 @@ const Navbar = () => {
                 className="flex items-center space-x-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <div className="w-10 h-10 bg-brand-card flex items-center justify-center border border-white/10">
-                   <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-brand-accent"></div>
-                   </div>
-                </div>
+                <a href="#" className="flex items-center space-x-4 group">
+  <img src="/logo.png" alt="Safe Mining" className="h-10" />
+  <span className="text-xl font-bold text-white">Safe Mining</span>
+</a>
+                
                 <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
               </a>
               <button onClick={() => setMobileMenuOpen(false)}>
@@ -543,9 +543,10 @@ const Technology = () => {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-xl cursor-default"
           >
-            <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent mb-8">
-              <Scale className="w-10 h-10" />
-            </div>
+            <a href="#" className="flex items-center space-x-4 group">
+  <img src="/logo.png" alt="Safe Mining" className="h-10" />
+  <span className="text-xl font-bold text-white">Safe Mining</span>
+</a>
             <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Plataforma ASTREA</h3>
             <p className="text-white/60 mb-8 leading-relaxed">
               Inteligência especializada em monitoramento jurídico e processual, garantindo conformidade total.
@@ -955,10 +956,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-5">
             <div className="flex items-center mb-10">
-              <div className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10">
-                <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
-                  <div className="w-1 h-1 bg-brand-accent"></div>
-                </div>
+              <a href="#" className="flex items-center space-x-4 group">
+  <img src="/logo.png" alt="Safe Mining" className="h-10" />
+  <span className="text-xl font-bold text-white">Safe Mining</span>
+</a>
               </div>
               <span className="ml-4 text-2xl font-bold tracking-tight text-white">Safe <span className="text-brand-accent">Mining</span></span>
             </div>
