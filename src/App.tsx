@@ -199,7 +199,8 @@ const Hero = () => {
       <p className="text-2xl text-white font-bold">{stat.val}</p>
       <p className="text-sm text-white/60">{stat.label}</p>
     </motion.div>
-  </div> 
+  ))}
+</div>
 </section>
   );
 };
