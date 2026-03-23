@@ -56,6 +56,9 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container-max flex justify-between items-center">
         <a href="#" className="flex items-center space-x-4 group">
+  <img src="/logo.png" alt="Safe Mining" className="h-10" />
+  <span className="text-xl font-bold text-white">Safe Mining</span>
+</a>
           <div className="w-10 h-10 bg-white/10 flex items-center justify-center border border-white/10 group-hover:border-brand-accent transition-colors">
             <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
                <div className="w-1 h-1 bg-brand-accent"></div>
@@ -178,7 +181,7 @@ const Hero = () => {
                   <div className="w-2 h-2 md:w-3 md:h-3 bg-brand-accent"></div>
                 </div>
               </div>
-              <span className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white uppercase">
+              <img src="/logo.png" className="h-20 md:h-32" />
                 Safe <span className="text-brand-accent">Mining</span>
               </span>
             </div>
