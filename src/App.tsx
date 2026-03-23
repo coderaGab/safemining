@@ -184,11 +184,26 @@ const Hero = () => {
 
         {/* CTA */}
         <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
-          Solicitar Consultoria
-        </a>
-    </section>
-  );
-};
+  Solicitar Consultoria
+</a>
+
+{/* STATS */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
+  {[
+    { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
+    { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
+    { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
+  ].map((stat, i) => (
+    <motion.div key={i} className="p-6 bg-brand-card/40 rounded-xl text-center">
+      <div className="mb-4">{stat.icon}</div>
+      <p className="text-2xl text-white font-bold">{stat.val}</p>
+      <p className="text-sm text-white/60">{stat.label}</p>
+    </motion.div>
+  ))}
+</div>
+
+</div> {/* FECHA container */}
+</section> {/* AGORA SIM */}
 
 const About = () => {
   return (
