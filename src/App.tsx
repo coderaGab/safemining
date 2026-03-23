@@ -146,9 +146,9 @@ const Hero = () => {
       {/* Background Image with Opacity */}
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: 'url(${fundo});',
-        }}
+        style={{
+  backgroundImage: "url('/fundo.jpg')"
+}}
       ></div>
       
       {/* Gradient Overlay for readability */}
