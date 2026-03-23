@@ -199,12 +199,10 @@ const Hero = () => {
       <p className="text-2xl text-white font-bold">{stat.val}</p>
       <p className="text-sm text-white/60">{stat.label}</p>
     </motion.div>
-  ))}
-</div>
-
-</div> {/* FECHA container */}
-</section> {/* AGORA SIM */}
-
+  </div> 
+</section>
+  );
+};
 const About = () => {
   return (
     <section id="about" className="section-padding bg-brand-paper text-brand-ink">
