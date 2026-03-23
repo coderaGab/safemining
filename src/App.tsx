@@ -662,32 +662,7 @@ const Risks = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mb-8 text-center">Comparativo de Custo</h3>
-            <div className="space-y-6">
-              <div className="flex justify-between items-center pb-4 border-b border-white/5">
-                <span className="text-brand-text-muted">Monitoramento Mensal</span>
-                <span className="text-brand-accent font-bold">R$ 6.360</span>
-              </div>
-              <div className="flex justify-between items-center pb-4 border-b border-white/5">
-                <span className="text-brand-text-muted">Relat. Pesquisa Positivo</span>
-                <span className="text-brand-text font-bold">R$ 30.000</span>
-              </div>
-              <div className="flex justify-between items-center pb-4 border-b border-white/5">
-                <span className="text-brand-text-muted">Req. Guia de Utilização</span>
-                <span className="text-brand-text font-bold">R$ 18.000</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-brand-text-muted">Relatório Anual de Lavra</span>
-                <span className="text-brand-text font-bold">R$ 3.500</span>
-              </div>
-            </div>
-            <p className="mt-8 text-xs text-brand-text-muted text-center italic">O custo de menos de 1 serviço avulso já cobre quase 6 meses de monitoramento.</p>
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
+            
 
 const Team = () => {
   const team = [
