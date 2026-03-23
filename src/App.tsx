@@ -165,6 +165,7 @@ const Hero = () => {
 
       <div className="container-max relative z-10 text-center">
         
+        {/* LOGO */}
         <div className="flex items-center justify-center space-x-6 mb-6">
           <img src="/logo.png" className="h-20 md:h-28" />
           <span className="text-4xl md:text-6xl font-bold text-white">
@@ -172,6 +173,7 @@ const Hero = () => {
           </span>
         </div>
 
+        {/* TEXTO */}
         <h2 className="text-2xl md:text-4xl font-serif text-white mb-6">
           Segurança jurídica do subsolo à superfície
         </h2>
@@ -180,52 +182,36 @@ const Hero = () => {
           Monitoramento automatizado e inteligência técnico-jurídica integrada
         </p>
 
+        {/* CTA */}
         <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
           Solicitar Consultoria
         </a>
 
-        {/* STATS AGORA CORRETAMENTE AQUI */}
+        {/* STATS (VERSÃO CORRETA) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
           {[
-            { val: "500", label: "Processos Monitorados" },
-            { val: "24/7", label: "Monitoramento Contínuo" },
-            { val: "100%", label: "Conformidade Regulatória" }
+            { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
+            { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
+            { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
           ].map((stat, i) => (
-            <div key={i} className="bg-brand-card/40 p-6 rounded-xl text-center">
-              <p className="text-3xl font-bold text-white">{stat.val}</p>
-              <p className="text-sm text-white/60">{stat.label}</p>
-            </div>
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}
+              className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center group hover:border-brand-accent/30 transition-all"
+            >
+              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all">
+                {stat.icon}
+              </div>
+              <p className="text-4xl font-bold text-white mb-2">{stat.val}</p>
+              <p className="text-sm text-brand-text-muted font-medium uppercase tracking-widest">
+                {stat.label}
+              </p>
+            </motion.div>
           ))}
         </div>
 
-      </div>
-    </section>
-  );
-};
-
-          {/* Stats Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
-              { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
-              { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
-            ].map((stat, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}
-                className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center group hover:border-brand-accent/30 transition-all"
-              >
-                <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all">
-                  {stat.icon}
-                </div>
-                <p className="text-4xl font-bold text-white mb-2">{stat.val}</p>
-                <p className="text-sm text-brand-text-muted font-medium uppercase tracking-widest">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
