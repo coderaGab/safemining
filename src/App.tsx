@@ -35,6 +35,7 @@ import {
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -57,6 +58,7 @@ const Navbar = () => {
         ? "bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5"
         : "bg-transparent py-6"
     }`}>
+
       <div className="container-max flex justify-between items-center">
 
         {/* LOGO */}
@@ -67,7 +69,7 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* MENU */}
+        {/* MENU DESKTOP */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a
@@ -79,7 +81,6 @@ const Navbar = () => {
             </a>
           ))}
 
-          {/* BOTÃO */}
           <a
             href="#contact"
             className="bg-brand-accent text-brand-bg px-6 py-2 rounded-md text-sm font-bold hover:brightness-110 transition-all"
@@ -87,56 +88,58 @@ const Navbar = () => {
             Fale Conosco
           </a>
         </div>
-      </div>
-    </nav>
-  );
-};
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-brand-text" onClick={() => setMobileMenuOpen(true)}>
+        {/* BOTÃO MOBILE */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setMobileMenuOpen(true)}
+        >
           <Menu className="w-6 h-6" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MENU MOBILE */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 bg-brand-bg z-[60] flex flex-col p-6"
           >
+            {/* HEADER MOBILE */}
             <div className="flex justify-between items-center">
-              <a 
-                href="#" 
-                className="flex items-center space-x-4"
+              <a
+                href="#"
+                className="flex items-center space-x-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
-                
-                <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
+                <img src="/logo.png" className="h-10" />
+                <span className="text-xl font-bold text-white">
+                  Safe <span className="text-brand-accent">Mining</span>
+                </span>
               </a>
+
               <button onClick={() => setMobileMenuOpen(false)}>
-                <X className="w-8 h-8 text-brand-text" />
+                <X className="w-8 h-8 text-white" />
               </button>
             </div>
+
+            {/* LINKS */}
             <div className="flex flex-col space-y-8 mt-16">
               {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.href} 
-                  className="text-3xl font-bold text-brand-text"
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-3xl font-bold text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
-              <a 
-                href="#contact" 
+
+              <a
+                href="#contact"
                 className="bg-brand-accent text-brand-bg px-8 py-4 rounded-md text-lg font-bold w-full mt-4 text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -146,6 +149,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
     </nav>
   );
 };
