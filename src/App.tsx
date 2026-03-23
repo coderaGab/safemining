@@ -33,7 +33,7 @@ import {
 
 // --- Components ---
 
-const Navbar = () => {
+cconst Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -55,26 +55,22 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container-max flex justify-between items-center">
-<a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
 
-        {/* Desktop Nav & Button Group */}
+        {/* LOGO */}
+        <a href="#" className="flex items-center space-x-3">
+          <img src="/logo.png" alt="Safe Mining" className="h-10" />
+          <span className="text-xl font-bold text-white">Safe Mining</span>
+        </a>
+
+        {/* MENU */}
         <div className="hidden md:flex items-center space-x-10">
-          <div className="flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href} 
-                className="text-sm font-medium text-brand-text-muted hover:text-brand-text transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
+          {navLinks.map((link) => (
+            <a key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white">
+              {link.name}
+            </a>
+          ))}
 
-          <a href="#contact" className="bg-brand-accent text-brand-bg px-6 py-2 rounded-md text-sm font-bold hover:brightness-110 transition-all text-center">
+          <a href="#contact" className="bg-brand-accent text-brand-bg px-5 py-2 rounded font-bold">
             Fale Conosco
           </a>
         </div>
@@ -168,11 +164,13 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col items-center mb-12">
-            <div className="flex items-center space-x-6 mb-6">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10">
-                <div className="w-8 h-8 md:w-12 md:h-12 border-2 md:border-4 border-brand-accent rotate-45 flex items-center justify-center">
-                  <div className="w-2 h-2 md:w-3 md:h-3 bg-brand-accent"></div>
-                </div>
+            <div className="flex items-center justify-center space-x-6 mb-6">
+  <img src="/logo.png" className="h-20 md:h-28" />
+
+  <span className="text-4xl md:text-6xl font-bold text-white">
+    Safe <span className="text-brand-accent">Mining</span>
+  </span>
+
               </div>
               <img src="/logo.png" className="h-20 md:h-32" />
                 Safe <span className="text-brand-accent">Mining</span>
@@ -955,11 +953,10 @@ const Footer = () => {
       <div className="container-max">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-5">
-            <div className="flex items-center mb-10">
-              <a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
+            <div className="flex items-center space-x-3 mb-6">
+  <img src="/logo.png" className="h-10" />
   <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
+</div>
               </div>
               <span className="ml-4 text-2xl font-bold tracking-tight text-white">Safe <span className="text-brand-accent">Mining</span></span>
             </div>
