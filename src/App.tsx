@@ -5,7 +5,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import fundo from "./assets/fundo.jpg";
 import { 
   ArrowRight, 
   Menu, 
