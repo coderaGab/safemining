@@ -186,33 +186,6 @@ const Hero = () => {
         <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
           Solicitar Consultoria
         </a>
-
-        {/* STATS (VERSÃO CORRETA) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
-          {[
-            { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
-            { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
-            { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
-          ].map((stat, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}
-              className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center group hover:border-brand-accent/30 transition-all"
-            >
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all">
-                {stat.icon}
-              </div>
-              <p className="text-4xl font-bold text-white mb-2">{stat.val}</p>
-              <p className="text-sm text-brand-text-muted font-medium uppercase tracking-widest">
-                {stat.label}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
-      </div>
     </section>
   );
 };
