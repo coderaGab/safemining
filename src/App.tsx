@@ -153,9 +153,11 @@ const Navbar = () => {
 };
 
 const Hero = () => {
+ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-brand-bg">
       
+      {/* BG */}
       <div 
         className="absolute inset-0 opacity-40 bg-cover bg-center"
         style={{ backgroundImage: "url('/fundo.jpg')" }}
@@ -183,26 +185,41 @@ const Hero = () => {
         </p>
 
         {/* CTA */}
-        <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
-  Solicitar Consultoria
-</a>
+        <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold hover:brightness-110 transition">
+          Solicitar Consultoria
+        </a>
 
-{/* STATS */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
-  {[
-    { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
-    { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
-    { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
-  ].map((stat, i) => (
-    <motion.div key={i} className="p-6 bg-brand-card/40 rounded-xl text-center">
-      <div className="mb-4">{stat.icon}</div>
-      <p className="text-2xl text-white font-bold">{stat.val}</p>
-      <p className="text-sm text-white/60">{stat.label}</p>
-    </motion.div>
-  ))}
-</div>
-</div>
-</section>
+        {/* STATS PREMIUM */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
+          {[
+            { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
+            { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
+            { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
+          ].map((stat, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 + (i * 0.1) }}
+              className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center group hover:border-brand-accent/30 transition-all"
+            >
+              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all">
+                {stat.icon}
+              </div>
+
+              <p className="text-4xl font-bold text-white mb-2">
+                {stat.val}
+              </p>
+
+              <p className="text-sm text-brand-text-muted font-medium uppercase tracking-widest">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+      </div>
+    </section>
   );
 };
 const About = () => {
