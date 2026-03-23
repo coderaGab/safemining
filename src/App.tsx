@@ -873,54 +873,76 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Column - Form */}
-          <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
-            <h3 className="text-2xl font-serif font-bold text-white mb-8">Envie uma mensagem</h3>
-            <form className="space-y-6">
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Nome completo</label>
-                <input 
-                  type="text" 
-                  placeholder="Seu nome"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Empresa</label>
-                <input 
-                  type="text" 
-                  placeholder="Nome da empresa"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-white/70 uppercase tracking-widest">E-mail</label>
-                <input 
-                  type="email" 
-                  placeholder="seu@email.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Quantidade de processos</label>
-                <input 
-                  type="text" 
-                  placeholder="Ex: 50 processos"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Mensagem</label>
-                <textarea 
-                  rows={4}
-                  placeholder="Como podemos ajudar?"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors resize-none"
-                ></textarea>
-              </div>
-              <button className="w-full bg-brand-accent text-brand-bg py-5 rounded-xl text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all">
-                Enviar Mensagem
-              </button>
-            </form>
+         <form 
+  action="https://api.web3forms.com/submit" 
+  method="POST" 
+  className="space-y-6"
+>
+
+  <input type="hidden" name="access_key" value="377acf8a-8814-41ce-b0f8-641aab78d253" />
+  <input type="hidden" name="subject" value="Novo contato - Safe Mining" />
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Nome completo</label>
+    <input 
+      type="text" 
+      name="name"
+      placeholder="Seu nome"
+      required
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Empresa</label>
+    <input 
+      type="text" 
+      name="empresa"
+      placeholder="Nome da empresa"
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold text-white/70 uppercase tracking-widest">E-mail</label>
+    <input 
+      type="email" 
+      name="email"
+      placeholder="seu@email.com"
+      required
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Quantidade de processos</label>
+    <input 
+      type="text" 
+      name="processos"
+      placeholder="Ex: 50 processos"
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors"
+    />
+  </div>
+
+  <div className="space-y-2">
+    <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Mensagem</label>
+    <textarea 
+      name="message"
+      rows={4}
+      placeholder="Como podemos ajudar?"
+      required
+      className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-brand-accent transition-colors resize-none"
+    ></textarea>
+  </div>
+
+  <button 
+    type="submit"
+    className="w-full bg-brand-accent text-brand-bg py-5 rounded-xl text-sm font-bold uppercase tracking-widest hover:brightness-110 transition-all"
+  >
+    Enviar Mensagem
+  </button>
+
+</form>
           </div>
         </div>
       </motion.div>
