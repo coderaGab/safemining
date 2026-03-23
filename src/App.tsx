@@ -3,13 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-  ArrowRight, 
-  Menu, 
-  X, 
-  Mail, 
-  Phone, 
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ArrowRight,
+  Menu,
+  X,
+  Mail,
+  Phone,
   CheckCircle2,
   Bell,
   Gem,
@@ -27,8 +28,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Brain,
   Clock,
   Shield
-} from 'lucide-react';
-
+} from "lucide-react";
 // --- Components ---
 
 const Navbar = () => {
