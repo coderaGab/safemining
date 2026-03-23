@@ -33,47 +33,64 @@ import {
 
 // --- Components ---
 
-cconst Navbar = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Sobre', href: '#about' },
-    { name: 'Serviços', href: '#services' },
-    { name: 'Tecnologia', href: '#tech' },
-    { name: 'Riscos', href: '#risks' },
-    { name: 'Diferenciais', href: '#differentials' },
-    { name: 'Quem Somos', href: '#team' },
+    { name: "Sobre", href: "#about" },
+    { name: "Serviços", href: "#services" },
+    { name: "Tecnologia", href: "#tech" },
+    { name: "Riscos", href: "#risks" },
+    { name: "Diferenciais", href: "#differentials" },
+    { name: "Quem Somos", href: "#team" },
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled
+        ? "bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5"
+        : "bg-transparent py-6"
+    }`}>
       <div className="container-max flex justify-between items-center">
 
         {/* LOGO */}
         <a href="#" className="flex items-center space-x-3">
           <img src="/logo.png" alt="Safe Mining" className="h-10" />
-          <span className="text-xl font-bold text-white">Safe Mining</span>
+          <span className="text-xl font-bold text-white">
+            Safe <span className="text-brand-accent">Mining</span>
+          </span>
         </a>
 
         {/* MENU */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="text-sm text-white/70 hover:text-white">
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+            >
               {link.name}
             </a>
           ))}
 
-          <a href="#contact" className="bg-brand-accent text-brand-bg px-5 py-2 rounded font-bold">
+          {/* BOTÃO */}
+          <a
+            href="#contact"
+            className="bg-brand-accent text-brand-bg px-6 py-2 rounded-md text-sm font-bold hover:brightness-110 transition-all"
+          >
             Fale Conosco
           </a>
         </div>
+      </div>
+    </nav>
+  );
+};
 
         {/* Mobile Toggle */}
         <button className="md:hidden text-brand-text" onClick={() => setMobileMenuOpen(true)}>
@@ -136,65 +153,42 @@ cconst Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-brand-bg">
-      {/* Background Image with Opacity */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
-        style={{
-  backgroundImage: "url('/fundo.jpg')"
-}}
-      ></div>
       
-      {/* Gradient Overlay for readability */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-brand-bg/40 via-brand-bg/60 to-brand-bg"></div>
+      {/* Background */}
+      <div 
+        className="absolute inset-0 opacity-40 bg-cover bg-center"
+        style={{ backgroundImage: "url('/fundo.jpg')" }}
+      />
 
-      {/* Background Decorative Elements */}
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-brand-bg/40 via-brand-bg/60 to-brand-bg"></div>
 
       <div className="container-max relative z-10 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
-        >
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-brand-accent text-xs font-bold uppercase tracking-widest mb-10">
-            <Shield className="w-3.5 h-3.5" />
-            <span>Mais de 500 processos minerários sob gestão</span>
-          </div>
-          
-          <div className="flex flex-col items-center mb-12">
-            <div className="flex items-center justify-center space-x-6 mb-6">
-  <img src="/logo.png" className="h-20 md:h-28" />
+        
+        {/* LOGO + NOME */}
+        <div className="flex items-center justify-center space-x-6 mb-6">
+          <img src="/logo.png" className="h-20 md:h-28" />
 
-  <span className="text-4xl md:text-6xl font-bold text-white">
-    Safe <span className="text-brand-accent">Mining</span>
-  </span>
+          <span className="text-4xl md:text-6xl font-bold text-white">
+            Safe <span className="text-brand-accent">Mining</span>
+          </span>
+        </div>
 
-              </div>
-              <img src="/logo.png" className="h-20 md:h-32" />
-                Safe <span className="text-brand-accent">Mining</span>
-              </span>
-            </div>
-            <div className="h-px w-32 bg-brand-accent/30 mb-8"></div>
-            <h2 className="text-2xl md:text-4xl font-serif font-medium text-white/90 tracking-wide uppercase">
-              Segurança jurídica do subsolo à superfície
-            </h2>
-          </div>
-          
-          <p className="text-lg md:text-xl text-brand-text-muted mb-12 leading-relaxed max-w-2xl mx-auto font-medium">
-            Monitoramento automatizado e inteligência técnico-jurídica integrada para proteger seus direitos minerários e evitar perdas de prazos.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-24">
-            <a href="#contact" className="bg-brand-accent text-brand-bg px-10 py-4 rounded-md text-lg font-bold hover:brightness-110 transition-all flex items-center justify-center space-x-2 w-full sm:w-auto">
-              <span>Solicitar Consultoria</span>
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a href="#services" className="bg-transparent text-white border border-white/20 px-10 py-4 rounded-md text-lg font-bold hover:bg-white/5 transition-all w-full sm:w-auto">
-              Conheça Nossos Serviços
-            </a>
-          </div>
+        <h2 className="text-2xl md:text-4xl font-serif text-white mb-6">
+          Segurança jurídica do subsolo à superfície
+        </h2>
+
+        <p className="text-white/70 max-w-xl mx-auto mb-10">
+          Monitoramento automatizado e inteligência técnico-jurídica integrada
+        </p>
+
+        <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold">
+          Solicitar Consultoria
+        </a>
+
+      </div>
+    </section>
+  );
+};
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
