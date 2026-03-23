@@ -535,33 +535,28 @@ const Technology = () => {
           
           {/* ASTREA Card */}
           <motion.div 
-  whileHover={{ scale: 1.02, y: -5 }}
-  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-  className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-xl cursor-default"
->
-  <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent mb-8">
-    <Layers className="w-10 h-10" />
-  </div>
-
-  <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">
-    PLATAFORMA ASTREA
-  </h3>
-
-  <p className="text-white/60 mb-8 leading-relaxed">
-    Inteligência especializada em monitoramento jurídico e processual, garantindo conformidade total.
-  </p>
-
-  <ul className="space-y-4">
-    <li className="flex items-center space-x-3 text-sm font-medium">
-      <CheckCircle2 className="w-5 h-5 text-brand-accent" />
-      <span>Análise Técnica + Jurídica Integrada</span>
-    </li>
-    <li className="flex items-center space-x-3 text-sm font-medium">
-      <CheckCircle2 className="w-5 h-5 text-brand-accent" />
-      <span>Gestão de Prazos e Notificações</span>
-    </li>
-  </ul>
-</motion.div>
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-xl cursor-default"
+          >
+            <a href="#" className="flex items-center space-x-4 group">
+</a>
+            <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Plataforma ASTREA</h3>
+            <p className="text-white/60 mb-8 leading-relaxed">
+              Inteligência especializada em monitoramento jurídico e processual, garantindo conformidade total.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-center space-x-3 text-sm font-medium">
+                <CheckCircle2 className="w-5 h-5 text-brand-accent" />
+                <span>Análise Técnica + Jurídica Integrada</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm font-medium">
+                <CheckCircle2 className="w-5 h-5 text-brand-accent" />
+                <span>Gestão de Prazos e Notificações</span>
+              </li>
+            </ul>
+          </motion.div>
+        </div>
 
             {/* Fluxo de Monitoramento */}
         <div className="bg-white/5 p-12 rounded-3xl border border-white/10">
