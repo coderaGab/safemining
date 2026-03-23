@@ -153,11 +153,10 @@ const Navbar = () => {
 };
 
 const Hero = () => {
- const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-brand-bg">
       
-      {/* BG */}
+      {/* Background */}
       <div 
         className="absolute inset-0 opacity-40 bg-cover bg-center"
         style={{ backgroundImage: "url('/fundo.jpg')" }}
@@ -167,7 +166,7 @@ const Hero = () => {
 
       <div className="container-max relative z-10 text-center">
         
-        {/* LOGO */}
+        {/* Logo */}
         <div className="flex items-center justify-center space-x-6 mb-6">
           <img src="/logo.png" className="h-20 md:h-28" />
           <span className="text-4xl md:text-6xl font-bold text-white">
@@ -175,21 +174,22 @@ const Hero = () => {
           </span>
         </div>
 
-        {/* TEXTO */}
+        {/* Title */}
         <h2 className="text-2xl md:text-4xl font-serif text-white mb-6">
           Segurança jurídica do subsolo à superfície
         </h2>
 
+        {/* Subtitle */}
         <p className="text-white/70 max-w-xl mx-auto mb-10">
           Monitoramento automatizado e inteligência técnico-jurídica integrada
         </p>
 
-        {/* CTA */}
+        {/* Button */}
         <a href="#contact" className="bg-brand-accent text-brand-bg px-8 py-4 rounded font-bold hover:brightness-110 transition">
           Solicitar Consultoria
         </a>
 
-        {/* STATS PREMIUM */}
+        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16">
           {[
             { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
@@ -201,17 +201,17 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + (i * 0.1) }}
-              className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center group hover:border-brand-accent/30 transition-all"
+              className="bg-brand-card/40 backdrop-blur-sm p-8 rounded-2xl border border-white/10 flex flex-col items-center text-center"
             >
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center text-brand-accent mb-6 group-hover:bg-brand-accent group-hover:text-brand-bg transition-all">
+              <div className="mb-4 text-brand-accent">
                 {stat.icon}
               </div>
 
-              <p className="text-4xl font-bold text-white mb-2">
+              <p className="text-3xl font-bold text-white">
                 {stat.val}
               </p>
 
-              <p className="text-sm text-brand-text-muted font-medium uppercase tracking-widest">
+              <p className="text-sm text-white/60">
                 {stat.label}
               </p>
             </motion.div>
