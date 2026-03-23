@@ -540,6 +540,9 @@ const Technology = () => {
             className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-xl cursor-default"
           >
             <a href="#" className="flex items-center space-x-4 group">
+              <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent mb-8">
+  <Scale className="w-10 h-10" />
+</div>
 </a>
             <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Plataforma ASTREA</h3>
             <p className="text-white/60 mb-8 leading-relaxed">
