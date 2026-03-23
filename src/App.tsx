@@ -609,7 +609,7 @@ const Risks = () => {
   ];
 
   return (
-    <section id="risks" className="section-padding bg-brand-bg">
+<section id="risks" className="section-padding bg-brand-bg">
       <motion.div 
         className="container-max"
         initial={{ opacity: 0, y: 30 }}
@@ -635,7 +635,7 @@ const Risks = () => {
           </div>
           <div className="bg-brand-card p-10 rounded-3xl border border-white/10 shadow-2xl">
             <h3 className="text-2xl font-bold mb-8 text-center">Prazos Críticos ANM</h3>
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4">
               <div className="bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="px-3 py-1 bg-brand-accent text-brand-bg text-[10px] font-bold rounded uppercase">Jan e Jul</div>
@@ -661,6 +661,12 @@ const Risks = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
 
             
 
