@@ -347,8 +347,7 @@ const Services = () => {
         "Justificativa, comunicação sobre prorrogação",
         "Relatório Final de Pesquisa Negativo",
         "Relatório Final de Pesquisa Positivo",
-        "OVERDELIVERY: Verificação de áreas livres em leilões",
-        "OVERDELIVERY: Desistência de Requerimento de Alvará"
+
       ]
     }
   ];
