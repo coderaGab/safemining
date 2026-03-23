@@ -873,7 +873,10 @@ const Contact = () => {
             </div>
           </div>
 
-         <form 
+          {/* Right Column - Form */}
+          <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
+            <h3 className="text-2xl font-serif font-bold text-white mb-8">Envie uma mensagem</h3>
+            <form 
   action="https://api.web3forms.com/submit" 
   method="POST" 
   className="space-y-6"
