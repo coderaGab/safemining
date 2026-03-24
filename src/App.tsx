@@ -876,7 +876,7 @@ const Contact = () => {
                   LinkedIn
                 </p>
                 <a
-                  href="https://linkedin.com/company/safe-mining-servicos-estrategicos"
+                  href="https://linkedin.com/company/safe-mining-servicos-estratégicos"
                   target="_blank"
                   rel="noreferrer"
                   className="text-brand-accent font-medium hover:underline"
