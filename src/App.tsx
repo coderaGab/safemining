@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Linkedin } from "lucide-react";
 import React from "react";
 import { 
   ArrowRight, 
@@ -870,7 +871,7 @@ const Contact = () => {
         LinkedIn
       </p>
       <a
-        href="https://linkedin.com/company/safe-mining-serviços-estratégicos"
+        href="https://linkedin.com/company/safe-mining-serviços-estrategicos"
         target="_blank"
         rel="noreferrer"
         className="text-brand-accent font-medium hover:underline transition"
