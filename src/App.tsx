@@ -1072,6 +1072,12 @@ const Footer = () => {
             <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Social</h4>
             <ul className="space-y-4 text-brand-text-muted">
               <li><a href="#" className="hover:text-brand-accent transition-colors">LinkedIn</a></li>
+              <a>
+                  href="https://www.linkedin.com/company/safe-mining-servi%C3%A7os-estrat%C3%A9gicos"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-brand-accent font-medium hover:underline"
+             </a>
               <li><a href="#" className="hover:text-brand-accent transition-colors">Instagram</a></li>
               <li><a href="#" className="hover:text-brand-accent transition-colors">YouTube</a></li>
             </ul>
