@@ -944,7 +944,7 @@ const Contact = () => {
       </div>
     </div>
   </div>
-</div>>
+</div>
 
           {/* Right Column - Form */}
           <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
