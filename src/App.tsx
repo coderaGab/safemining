@@ -996,7 +996,7 @@ const Contact = () => {
     />
   </div>
 
-  <div className="space-y-2">
+  <div> className="space-y-2"
     <label className="text-xs font-bold text-white/70 uppercase tracking-widest">Mensagem</label>
     <textarea 
       name="message"
@@ -1017,6 +1017,7 @@ const Contact = () => {
 </form>
           </div>
         </div>
+      </div>
       </motion.div>
     </section>
   );
