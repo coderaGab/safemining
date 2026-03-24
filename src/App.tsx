@@ -154,8 +154,8 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat"
         style={{
-  backgroundImage: "url('/fundo.jpg')"
-}}
+          backgroundImage: "url('/fundo.jpg')"
+        }}
       ></div>
       
       {/* Gradient Overlay for readability */}
@@ -179,16 +179,20 @@ const Hero = () => {
           
           <div className="flex flex-col items-center mb-12">
             <div className="flex items-center space-x-6 mb-6">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-white/5 flex items-center justify-center border border-white/10">
-                <div className="w-8 h-8 md:w-12 md:h-12 border-2 md:border-4 border-brand-accent rotate-45 flex items-center justify-center">
-                  <div className="w-2 h-2 md:w-3 md:h-3 bg-brand-accent"></div>
-                </div>
-              </div>
+
+              <img 
+                src="/logo.png" 
+                alt="Logo" 
+                className="h-16 md:h-24 w-auto object-contain"
+              />
+
               <span className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white uppercase">
                 Safe <span className="text-brand-accent">Mining</span>
               </span>
             </div>
+
             <div className="h-px w-32 bg-brand-accent/30 mb-8"></div>
+
             <h2 className="text-2xl md:text-4xl font-serif font-medium text-white/90 tracking-wide uppercase">
               Segurança jurídica do subsolo à superfície
             </h2>
