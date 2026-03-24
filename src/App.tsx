@@ -1070,7 +1070,7 @@ const Footer = () => {
 
           <div className="lg:col-span-2">
             <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Social</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
   <li>
     <a
       href="https://www.linkedin.com/company/safe-mining-servi%C3%A7os-estrat%C3%A9gicos"
