@@ -31,8 +31,6 @@ import {
   Shield
 } from 'lucide-react';
 
-// --- Components ---
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -55,13 +53,16 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container-max flex justify-between items-center">
+
         <a href="#" className="flex items-center space-x-4 group">
-          <div className="w-10 h-10 bg-white/10 flex items-center justify-center border border-white/10 group-hover:border-brand-accent transition-colors">
-            <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
-               <div className="w-1 h-1 bg-brand-accent"></div>
-            </div>
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
+          <img 
+            src="/logo.png" 
+            alt="Logo" 
+            className="h-10 w-auto object-contain"
+          />
+          <span className="text-xl font-bold tracking-tight text-white uppercase">
+            Safe <span className="text-brand-accent">Mining</span>
+          </span>
         </a>
 
         {/* Desktop Nav & Button Group */}
@@ -104,17 +105,21 @@ const Navbar = () => {
                 className="flex items-center space-x-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <div className="w-10 h-10 bg-brand-card flex items-center justify-center border border-white/10">
-                   <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
-                      <div className="w-1 h-1 bg-brand-accent"></div>
-                   </div>
-                </div>
-                <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
+                <img 
+                  src="/logo.png" 
+                  alt="Logo" 
+                  className="h-10 w-auto object-contain"
+                />
+                <span className="text-xl font-bold tracking-tight text-white uppercase">
+                  Safe <span className="text-brand-accent">Mining</span>
+                </span>
               </a>
+
               <button onClick={() => setMobileMenuOpen(false)}>
                 <X className="w-8 h-8 text-brand-text" />
               </button>
             </div>
+
             <div className="flex flex-col space-y-8 mt-16">
               {navLinks.map((link) => (
                 <a 
@@ -126,6 +131,7 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+
               <a 
                 href="#contact" 
                 className="bg-brand-accent text-brand-bg px-8 py-4 rounded-md text-lg font-bold w-full mt-4 text-center"
