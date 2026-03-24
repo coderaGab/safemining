@@ -552,7 +552,7 @@ const Technology = () => {
             </div>
             <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Plataforma ASTREA</h3>
             <p className="text-white/60 mb-8 leading-relaxed">
-              Inteligência especializada em monitoramento jurídico e processual, garantindo conformidade total.
+              Inteligência especializada em monitoramento jurídico, garantindo conformidade total.
             </p>
             <ul className="space-y-4">
               <li className="flex items-center space-x-3 text-sm font-medium">
