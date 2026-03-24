@@ -694,7 +694,7 @@ const Team = () => {
       role: "Advogado | Direito da Mineração – Lima & Martins",
       desc: "Especialista em Direito da Mineração, sócio da Lima & Martins Sociedade de Advogados. Atuação consolidada junto à ANM e amplo domínio do Código de Mineração. Garante segurança jurídica e conformidade legal.",
       email: "pmartins@safemining.com",
-      phone: "(31) 9168-6298",
+      phone: "(31) 99168-6298",
       icon: <Briefcase className="w-6 h-6" />
     }
   ];
@@ -932,7 +932,7 @@ const Contact = () => {
                   <Phone className="w-4 h-4" />
                   <span className="text-sm font-bold">
                     Dr. Philippe:{" "}
-                    <span className="text-white font-medium">(31) 9168-6298</span>
+                    <span className="text-white font-medium">(31) 99168-6298</span>
                   </span>
                 </div>
                 <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
