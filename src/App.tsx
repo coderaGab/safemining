@@ -3,17 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import React from "react";
@@ -66,10 +55,14 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-bg/95 backdrop-blur-sm py-4 border-b border-white/5' : 'bg-transparent py-6'}`}>
       <div className="container-max flex justify-between items-center">
-<a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
+        <a href="#" className="flex items-center space-x-4 group">
+          <div className="w-10 h-10 bg-white/10 flex items-center justify-center border border-white/10 group-hover:border-brand-accent transition-colors">
+            <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
+               <div className="w-1 h-1 bg-brand-accent"></div>
+            </div>
+          </div>
+          <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
+        </a>
 
         {/* Desktop Nav & Button Group */}
         <div className="hidden md:flex items-center space-x-10">
@@ -111,11 +104,11 @@ const Navbar = () => {
                 className="flex items-center space-x-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
-                
+                <div className="w-10 h-10 bg-brand-card flex items-center justify-center border border-white/10">
+                   <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
+                      <div className="w-1 h-1 bg-brand-accent"></div>
+                   </div>
+                </div>
                 <span className="text-xl font-bold tracking-tight text-white uppercase">Safe <span className="text-brand-accent">Mining</span></span>
               </a>
               <button onClick={() => setMobileMenuOpen(false)}>
@@ -185,7 +178,7 @@ const Hero = () => {
                   <div className="w-2 h-2 md:w-3 md:h-3 bg-brand-accent"></div>
                 </div>
               </div>
-              <img src="/logo.png" className="h-20 md:h-32" />
+              <span className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white uppercase">
                 Safe <span className="text-brand-accent">Mining</span>
               </span>
             </div>
@@ -554,10 +547,9 @@ const Technology = () => {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-xl cursor-default"
           >
-            <a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
+            <div className="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center text-brand-accent mb-8">
+              <Scale className="w-10 h-10" />
+            </div>
             <h3 className="text-2xl font-bold mb-4 uppercase tracking-tight">Plataforma ASTREA</h3>
             <p className="text-white/60 mb-8 leading-relaxed">
               Inteligência especializada em monitoramento jurídico e processual, garantindo conformidade total.
@@ -617,7 +609,7 @@ const Risks = () => {
   ];
 
   return (
-<section id="risks" className="section-padding bg-brand-bg">
+    <section id="risks" className="section-padding bg-brand-bg">
       <motion.div 
         className="container-max"
         initial={{ opacity: 0, y: 30 }}
@@ -643,7 +635,7 @@ const Risks = () => {
           </div>
           <div className="bg-brand-card p-10 rounded-3xl border border-white/10 shadow-2xl">
             <h3 className="text-2xl font-bold mb-8 text-center">Prazos Críticos ANM</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-12">
               <div className="bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="px-3 py-1 bg-brand-accent text-brand-bg text-[10px] font-bold rounded uppercase">Jan e Jul</div>
@@ -669,12 +661,6 @@ const Risks = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </motion.div>
-    </section>
-  );
-};
 
             
 
@@ -967,10 +953,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-5">
             <div className="flex items-center mb-10">
-              <a href="#" className="flex items-center space-x-4 group">
-  <img src="/logo.png" alt="Safe Mining" className="h-10" />
-  <span className="text-xl font-bold text-white">Safe Mining</span>
-</a>
+              <div className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10">
+                <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
+                  <div className="w-1 h-1 bg-brand-accent"></div>
+                </div>
               </div>
               <span className="ml-4 text-2xl font-bold tracking-tight text-white">Safe <span className="text-brand-accent">Mining</span></span>
             </div>
@@ -1042,5 +1028,4 @@ export default function App() {
       <Footer />
     </div>
   );
-}
 }
