@@ -1043,11 +1043,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-5">
             <div className="flex items-center mb-10">
-              <div className="w-10 h-10 bg-white/5 flex items-center justify-center border border-white/10">
-                <div className="w-5 h-5 border-2 border-brand-accent rotate-45 flex items-center justify-center">
-                  <div className="w-1 h-1 bg-brand-accent"></div>
-                </div>
-              </div>
+             <img 
+    src="/logo.png" 
+    alt="Safe Mining"
+    className="h-10 w-auto"
+  /> 
               <span className="ml-4 text-2xl font-bold tracking-tight text-white">Safe <span className="text-brand-accent">Mining</span></span>
             </div>
             <p className="text-brand-text-muted text-lg leading-relaxed max-w-sm">
@@ -1113,7 +1113,7 @@ const Footer = () => {
         
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] text-brand-text-muted/50">
           <p>© 2026 SAFE MINING. ALL RIGHTS RESERVED.</p>
-          <p className="mt-4 md:mt-0">DEVELOPED BY CODERA &gt;&gt;</p>
+          <p className="mt-4 md:mt-0">DEVELOPED BY CODERAGAB &gt;&gt;</p>
         </div>
       </div>
     </footer>
