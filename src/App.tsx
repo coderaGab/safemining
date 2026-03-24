@@ -168,7 +168,7 @@ const Hero = () => {
         >
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-brand-accent text-xs font-bold uppercase tracking-widest mb-10">
             <Shield className="w-3.5 h-3.5" />
-            <span>Mais de 50 processos minerários sob gestão</span>
+            <span>Mais de 500 processos minerários sob gestão</span>
           </div>
           
           <div className="flex flex-col items-center mb-12">
