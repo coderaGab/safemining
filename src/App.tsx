@@ -1076,15 +1076,31 @@ const Footer = () => {
       href="https://www.linkedin.com/company/safe-mining-servi%C3%A7os-estrat%C3%A9gicos"
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:text-brand-accent transition-colors"
+      className="text-brand-text-muted text-sm font-medium hover:text-brand-accent transition-colors"
     >
       LinkedIn
     </a>
   </li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">YouTube</a></li>
-            </ul>
-          </div>
+
+  <li>
+    <a
+      href="#"
+      className="text-brand-text-muted text-sm font-medium hover:text-brand-accent transition-colors"
+    >
+      Instagram
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="#"
+      className="text-brand-text-muted text-sm font-medium hover:text-brand-accent transition-colors"
+    >
+      YouTube
+    </a>
+  </li>
+</ul>
+</div> 
 
           <div className="lg:col-span-3">
             <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Legal</h4>
