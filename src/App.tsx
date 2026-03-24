@@ -567,7 +567,7 @@ const Technology = () => {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3 text-sm font-medium">
                 <CheckCircle2 className="w-5 h-5 text-brand-accent" />
-                <span>Análise Técnica + Jurídica Integrada</span>
+                <span>Análise Jurídica</span>
               </li>
               <li className="flex items-center space-x-3 text-sm font-medium">
                 <CheckCircle2 className="w-5 h-5 text-brand-accent" />
