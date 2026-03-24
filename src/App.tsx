@@ -8,6 +8,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import React from "react";
@@ -173,7 +178,7 @@ const Hero = () => {
         >
           <div className="inline-flex items-center space-x-2 px-4 py-1.5 bg-brand-accent/10 border border-brand-accent/20 rounded-full text-brand-accent text-xs font-bold uppercase tracking-widest mb-10">
             <Shield className="w-3.5 h-3.5" />
-            <span>Mais de 500 processos minerários sob gestão</span>
+            <span>Mais de 50 processos minerários sob gestão</span>
           </div>
           
           <div className="flex flex-col items-center mb-12">
@@ -210,7 +215,7 @@ const Hero = () => {
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: <FileText className="w-6 h-6" />, val: "500", label: "Processos Monitorados" },
+              { icon: <FileText className="w-6 h-6" />, val: "50+", label: "Processos Monitorados" },
               { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
               { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
             ].map((stat, i) => (
@@ -614,7 +619,7 @@ const Risks = () => {
   ];
 
   return (
-<section id="risks" className="section-padding bg-brand-bg">
+    <section id="risks" className="section-padding bg-brand-bg">
       <motion.div 
         className="container-max"
         initial={{ opacity: 0, y: 30 }}
@@ -640,7 +645,7 @@ const Risks = () => {
           </div>
           <div className="bg-brand-card p-10 rounded-3xl border border-white/10 shadow-2xl">
             <h3 className="text-2xl font-bold mb-8 text-center">Prazos Críticos ANM</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-12">
               <div className="bg-white/5 p-4 rounded-xl border border-white/5 flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                   <div className="px-3 py-1 bg-brand-accent text-brand-bg text-[10px] font-bold rounded uppercase">Jan e Jul</div>
@@ -666,14 +671,33 @@ const Risks = () => {
                 </div>
               </div>
             </div>
+
+            <h3 className="text-2xl font-bold mb-8 text-center">Comparativo de Custo</h3>
+            <div className="space-y-6">
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-brand-text-muted">Monitoramento Mensal</span>
+                <span className="text-brand-accent font-bold">R$ 6.360</span>
+              </div>
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-brand-text-muted">Relat. Pesquisa Positivo</span>
+                <span className="text-brand-text font-bold">R$ 30.000</span>
+              </div>
+              <div className="flex justify-between items-center pb-4 border-b border-white/5">
+                <span className="text-brand-text-muted">Req. Guia de Utilização</span>
+                <span className="text-brand-text font-bold">R$ 18.000</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-brand-text-muted">Relatório Anual de Lavra</span>
+                <span className="text-brand-text font-bold">R$ 3.500</span>
+              </div>
+            </div>
+            <p className="mt-8 text-xs text-brand-text-muted text-center italic">O custo de menos de 1 serviço avulso já cobre quase 6 meses de monitoramento.</p>
           </div>
         </div>
       </motion.div>
     </section>
   );
 };
-
-            
 
 const Team = () => {
   const team = [
