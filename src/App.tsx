@@ -840,49 +840,76 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center space-x-5">
-                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-                  <Globe className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Website</p>
-                  <p className="text-brand-accent font-medium">www.safemining.com</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-5">
-                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">E-mail</p>
-                  <p className="text-brand-accent font-medium">contato@safemining.com</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-5">
-                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Localização</p>
-                  <p className="text-brand-text-muted font-medium">Atendimento em todo o Brasil</p>
-                </div>
-              </div>
-            </div>
+  {/* Website */}
+  <div className="flex items-center space-x-5">
+    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+      <Globe className="w-6 h-6" />
+    </div>
+    <div>
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Website</p>
+      <p className="text-brand-accent font-medium">www.safemining.com</p>
+    </div>
+  </div>
 
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-4">
-              <p className="text-xs font-bold text-white/50 uppercase tracking-widest">Contato direto com nossa equipe:</p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-brand-accent">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm font-bold">Dra. Iraclézia: <span className="text-white font-medium">(81) 99874-6158</span></span>
-                </div>
-                <div className="flex items-center space-x-3 text-brand-accent">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm font-bold">Dr. Philippe: <span className="text-white font-medium">(31) 9168-6298</span></span>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* LinkedIn */}
+  <div className="flex items-center space-x-5">
+    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+      <Linkedin className="w-6 h-6" />
+    </div>
+    <div>
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">LinkedIn</p>
+      <a 
+        href="https://linkedin.com/company/safe-mining-serviços-estratégicos" 
+        target="_blank" 
+        rel="noreferrer" 
+        className="text-brand-accent font-medium hover:underline"
+      >
+        Safe Mining
+      </a>
+    </div>
+  </div>
+
+  {/* Localização */}
+  <div className="flex items-center space-x-5">
+    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+      <MapPin className="w-6 h-6" />
+    </div>
+    <div>
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Localização</p>
+      <p className="text-brand-text-muted font-medium">Atendimento em todo o Brasil</p>
+    </div>
+  </div>
+</div>
+
+{/* Card de Contato Direto */}
+<div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-4">
+  <p className="text-xs font-bold text-white/50 uppercase tracking-widest">Contato direto com nossa equipe:</p>
+  <div className="space-y-6">
+    {/* Dra. Iraclézia */}
+    <div className="space-y-2">
+      <div className="flex items-center space-x-3 text-brand-accent">
+        <Phone className="w-4 h-4" />
+        <span className="text-sm font-bold">Dra. Iraclézia: <span className="text-white font-medium">(81) 99874-6158</span></span>
+      </div>
+      <div className="flex items-center space-x-3 text-brand-accent/70 ml-7">
+        <Mail className="w-3.5 h-3.5" />
+        <span className="text-xs font-medium text-white/70">iraclezia@safemining.com</span>
+      </div>
+    </div>
+
+    {/* Dr. Philippe */}
+    <div className="space-y-2">
+      <div className="flex items-center space-x-3 text-brand-accent">
+        <Phone className="w-4 h-4" />
+        <span className="text-sm font-bold">Dr. Philippe: <span className="text-white font-medium">(31) 9168-6298</span></span>
+      </div>
+      <div className="flex items-center space-x-3 text-brand-accent/70 ml-7">
+        <Mail className="w-3.5 h-3.5" />
+        <span className="text-xs font-medium text-white/70">pmartins@safemining.com</span>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Right Column - Form */}
           <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
