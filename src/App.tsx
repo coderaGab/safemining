@@ -1089,7 +1089,7 @@ const Footer = () => {
       href="#"
       className="text-brand-text-muted text-sm font-medium hover:text-brand-accent transition-colors"
     >
-      Instagram
+      
     </a>
   </li>
 
@@ -1098,7 +1098,7 @@ const Footer = () => {
       href="#"
       className="text-brand-text-muted text-sm font-medium hover:text-brand-accent transition-colors"
     >
-      YouTube
+      
     </a>
   </li>
 </ul>
