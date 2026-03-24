@@ -660,7 +660,6 @@ const Risks = () => {
                   <span className="text-sm font-medium">Prorrogação do Alvará de Pesquisa</span>
                 </div>
               </div>
-            </div>
       </motion.div>
     </section>
   );
