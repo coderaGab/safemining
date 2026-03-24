@@ -9,6 +9,7 @@ import { Linkedin } from "lucide-react";
 import React from "react";
 import Privacidade from "./pages/Privacidade";
 import Termos from "./pages/Termos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { 
   ArrowRight, 
   Menu, 
