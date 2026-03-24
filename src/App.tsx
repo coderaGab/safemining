@@ -7,6 +7,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Linkedin } from "lucide-react";
 import React from "react";
+import Privacidade from "./pages/Privacidade";
+import Termos from "./pages/Termos";
 import { 
   ArrowRight, 
   Menu, 
@@ -1105,8 +1107,23 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <h4 className="text-brand-accent text-xs font-bold uppercase tracking-[0.2em] mb-8">Legal</h4>
             <ul className="space-y-4 text-brand-text-muted">
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Privacidade</a></li>
-              <li><a href="#" className="hover:text-brand-accent transition-colors">Termos</a></li>
+             <li>
+  <a 
+    href="/privacidade" 
+    className="hover:text-brand-accent transition-colors"
+  >
+    Privacidade
+  </a>
+</li>
+
+<li>
+  <a 
+    href="/termos" 
+    className="hover:text-brand-accent transition-colors"
+  >
+    Termos
+  </a>
+</li>
             </ul>
           </div>
         </div>
