@@ -846,8 +846,17 @@ const Contact = () => {
       <Globe className="w-6 h-6" />
     </div>
     <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Website</p>
-      <p className="text-brand-accent font-medium">www.safemining.com</p>
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+        Website
+      </p>
+      <a
+        href="https://www.safemining.com"
+        target="_blank"
+        rel="noreferrer"
+        className="text-brand-accent font-medium hover:underline"
+      >
+        www.safemining.com
+      </a>
     </div>
   </div>
 
@@ -857,12 +866,14 @@ const Contact = () => {
       <Linkedin className="w-6 h-6" />
     </div>
     <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">LinkedIn</p>
-      <a 
-        href="https://linkedin.com/company/safe-mining-serviços-estratégicos" 
-        target="_blank" 
-        rel="noreferrer" 
-        className="text-brand-accent font-medium hover:underline"
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+        LinkedIn
+      </p>
+      <a
+        href="https://linkedin.com/company/safe-mining-serviços-estratégicos"
+        target="_blank"
+        rel="noreferrer"
+        className="text-brand-accent font-medium hover:underline transition"
       >
         Safe Mining
       </a>
@@ -875,25 +886,40 @@ const Contact = () => {
       <MapPin className="w-6 h-6" />
     </div>
     <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">Localização</p>
-      <p className="text-brand-text-muted font-medium">Atendimento em todo o Brasil</p>
+      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+        Localização
+      </p>
+      <p className="text-brand-text-muted font-medium">
+        Atendimento em todo o Brasil
+      </p>
     </div>
   </div>
 </div>
 
 {/* Card de Contato Direto */}
-<div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-4">
-  <p className="text-xs font-bold text-white/50 uppercase tracking-widest">Contato direto com nossa equipe:</p>
-  <div className="space-y-6">
+<div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-5">
+  <p className="text-xs font-bold text-white/50 uppercase tracking-widest">
+    Contato direto com nossa equipe:
+  </p>
+
+  <div className="space-y-5">
     {/* Dra. Iraclézia */}
     <div className="space-y-2">
       <div className="flex items-center space-x-3 text-brand-accent">
         <Phone className="w-4 h-4" />
-        <span className="text-sm font-bold">Dra. Iraclézia: <span className="text-white font-medium">(81) 99874-6158</span></span>
+        <span className="text-sm font-bold">
+          Dra. Iraclézia:{" "}
+          <span className="text-white font-medium">
+            (81) 99874-6158
+          </span>
+        </span>
       </div>
-      <div className="flex items-center space-x-3 text-brand-accent/70 ml-7">
+
+      <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
         <Mail className="w-3.5 h-3.5" />
-        <span className="text-xs font-medium text-white/70">iraclezia@safemining.com</span>
+        <span className="text-xs text-white/70">
+          iraclezia@safemining.com
+        </span>
       </div>
     </div>
 
@@ -901,15 +927,23 @@ const Contact = () => {
     <div className="space-y-2">
       <div className="flex items-center space-x-3 text-brand-accent">
         <Phone className="w-4 h-4" />
-        <span className="text-sm font-bold">Dr. Philippe: <span className="text-white font-medium">(31) 9168-6298</span></span>
+        <span className="text-sm font-bold">
+          Dr. Philippe:{" "}
+          <span className="text-white font-medium">
+            (31) 9168-6298
+          </span>
+        </span>
       </div>
-      <div className="flex items-center space-x-3 text-brand-accent/70 ml-7">
+
+      <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
         <Mail className="w-3.5 h-3.5" />
-        <span className="text-xs font-medium text-white/70">pmartins@safemining.com</span>
+        <span className="text-xs text-white/70">
+          pmartins@safemining.com
+        </span>
       </div>
     </div>
   </div>
-</div>
+</div>>
 
           {/* Right Column - Form */}
           <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
