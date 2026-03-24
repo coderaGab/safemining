@@ -205,7 +205,7 @@ const Hero = () => {
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: <FileText className="w-6 h-6" />, val: "50+", label: "Processos Monitorados" },
+              { icon: <FileText className="w-6 h-6" />, val: "500+", label: "Processos Monitorados" },
               { icon: <Shield className="w-6 h-6" />, val: "24/7", label: "Monitoramento Contínuo" },
               { icon: <Scale className="w-6 h-6" />, val: "100%", label: "Conformidade Regulatória" }
             ].map((stat, i) => (
