@@ -819,135 +819,135 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className="section-padding bg-brand-bg">
-      <motion.div 
-        className="container-max"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Column */}
-          <div className="space-y-10">
-            <div>
-              <p className="text-brand-accent font-bold text-xs uppercase tracking-[0.2em] mb-4">Contato</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
-                Vamos <span className="text-brand-accent">conversar</span> <br /> sobre seu projeto
-              </h2>
-              <p className="text-brand-text-muted text-lg leading-relaxed max-w-md">
-                Entre em contato para uma consultoria personalizada. Nossa equipe está pronta para ajudar você a proteger e gerenciar seus processos minerários.
-              </p>
+    <section id="contato" className="bg-brand-bg text-brand-text py-24 border-t border-white/5">
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
+    <div className="container-max">
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+        {/* LEFT COLUMN */}
+        <div className="space-y-10">
+          <div>
+            <p className="text-xs font-bold text-brand-accent uppercase tracking-widest mb-4">
+              Contato
+            </p>
+            <h2 className="text-4xl font-serif font-bold text-white leading-tight mb-4">
+              Vamos conversar sobre seu projeto
+            </h2>
+            <p className="text-brand-text-muted max-w-lg">
+              Entre em contato para uma consultoria personalizada. Nossa equipe está pronta para ajudar você a proteger e gerenciar seus processos minerários.
+            </p>
+          </div>
+
+          {/* Infos */}
+          <div className="space-y-6">
+
+            {/* Website */}
+            <div className="flex items-center space-x-5">
+              <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+                <Globe className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+                  Website
+                </p>
+                <a
+                  href="https://www.safemining.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-brand-accent font-medium hover:underline"
+                >
+                  www.safemining.com
+                </a>
+              </div>
             </div>
 
-            <div className="space-y-6">
-  {/* Website */}
-  <div className="flex items-center space-x-5">
-    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-      <Globe className="w-6 h-6" />
-    </div>
-    <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
-        Website
-      </p>
-      <a
-        href="https://www.safemining.com"
-        target="_blank"
-        rel="noreferrer"
-        className="text-brand-accent font-medium hover:underline"
-      >
-        www.safemining.com
-      </a>
-    </div>
-  </div>
+            {/* LinkedIn */}
+            <div className="flex items-center space-x-5">
+              <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+                <Linkedin className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+                  LinkedIn
+                </p>
+                <a
+                  href="https://linkedin.com/company/safe-mining-servicos-estrategicos"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-brand-accent font-medium hover:underline"
+                >
+                  Safe Mining
+                </a>
+              </div>
+            </div>
 
-  {/* LinkedIn */}
-  <div className="flex items-center space-x-5">
-    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-      <Linkedin className="w-6 h-6" />
-    </div>
-    <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
-        LinkedIn
-      </p>
-      <a
-        href="https://linkedin.com/company/safe-mining-serviços-estratégicos"
-        target="_blank"
-        rel="noreferrer"
-        className="text-brand-accent font-medium hover:underline transition"
-      >
-        Safe Mining
-      </a>
-    </div>
-  </div>
+            {/* Localização */}
+            <div className="flex items-center space-x-5">
+              <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
+                <MapPin className="w-6 h-6" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
+                  Localização
+                </p>
+                <p className="text-brand-text-muted font-medium">
+                  Atendimento em todo o Brasil
+                </p>
+              </div>
+            </div>
+          </div>
 
-  {/* Localização */}
-  <div className="flex items-center space-x-5">
-    <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-brand-accent border border-white/5">
-      <MapPin className="w-6 h-6" />
-    </div>
-    <div>
-      <p className="text-xs font-bold text-white/50 uppercase tracking-widest mb-0.5">
-        Localização
-      </p>
-      <p className="text-brand-text-muted font-medium">
-        Atendimento em todo o Brasil
-      </p>
-    </div>
-  </div>
-</div>
+          {/* Card Contato */}
+          <div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-5">
+            <p className="text-xs font-bold text-white/50 uppercase tracking-widest">
+              Contato direto com nossa equipe:
+            </p>
 
-{/* Card de Contato Direto */}
-<div className="bg-white/5 p-8 rounded-2xl border border-white/5 space-y-5">
-  <p className="text-xs font-bold text-white/50 uppercase tracking-widest">
-    Contato direto com nossa equipe:
-  </p>
+            <div className="space-y-5">
+              {/* Dra */}
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3 text-brand-accent">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm font-bold">
+                    Dra. Iraclézia:{" "}
+                    <span className="text-white font-medium">(81) 99874-6158</span>
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span className="text-xs text-white/70">
+                    iraclezia@safemining.com
+                  </span>
+                </div>
+              </div>
 
-  <div className="space-y-5">
-    {/* Dra. Iraclézia */}
-    <div className="space-y-2">
-      <div className="flex items-center space-x-3 text-brand-accent">
-        <Phone className="w-4 h-4" />
-        <span className="text-sm font-bold">
-          Dra. Iraclézia:{" "}
-          <span className="text-white font-medium">
-            (81) 99874-6158
-          </span>
-        </span>
-      </div>
+              {/* Dr */}
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3 text-brand-accent">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm font-bold">
+                    Dr. Philippe:{" "}
+                    <span className="text-white font-medium">(31) 9168-6298</span>
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
+                  <Mail className="w-3.5 h-3.5" />
+                  <span className="text-xs text-white/70">
+                    pmartins@safemining.com
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
-        <Mail className="w-3.5 h-3.5" />
-        <span className="text-xs text-white/70">
-          iraclezia@safemining.com
-        </span>
-      </div>
-    </div>
-
-    {/* Dr. Philippe */}
-    <div className="space-y-2">
-      <div className="flex items-center space-x-3 text-brand-accent">
-        <Phone className="w-4 h-4" />
-        <span className="text-sm font-bold">
-          Dr. Philippe:{" "}
-          <span className="text-white font-medium">
-            (31) 9168-6298
-          </span>
-        </span>
-      </div>
-
-      <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
-        <Mail className="w-3.5 h-3.5" />
-        <span className="text-xs text-white/70">
-          pmartins@safemining.com
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-
-          {/* Right Column - Form */}
-          <div> className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl"
+        {/* RIGHT COLUMN - FORM */}
+        <div className="bg-white/5 p-10 rounded-3xl border border-white/10 shadow-2xl">
           <h3 className="text-2xl font-serif font-bold text-white mb-8">
             Envie uma mensagem
           </h3>
@@ -956,7 +956,7 @@ const Contact = () => {
 
             <input type="checkbox" name="botcheck" className="hidden" />
 
-            <div> className="space-y-2"
+            <div className="space-y-2">
               <label className="text-xs font-bold text-white/70 uppercase tracking-widest">
                 Nome completo
               </label>
@@ -1025,12 +1025,14 @@ const Contact = () => {
             >
               Enviar Mensagem
             </button>
-</form>
-          </div>
+
+          </form>
         </div>
+
       </div>
-      </motion.div>
-    </section>
+    </div>
+  </motion.div>
+</section>
   );
 };
 
