@@ -688,7 +688,7 @@ const Team = () => {
       name: "Dra. Iraclézia G. de Araújo",
       role: "Geóloga | Doutora em Geociências – UFPE",
       desc: "Doutora em Geociências pela UFPE, com especialização em aplicação técnica ao Direito Minerário. Une visão geológica profunda com conhecimento regulatório único no mercado. Responsável por toda análise técnica dos processos monitorados.",
-      email: "iraclezia@safemining.com",
+      email: "iraclezia@safeminingse.com",
       phone: "(81) 99874-6158",
       icon: <GraduationCap className="w-6 h-6" />
     },
@@ -696,7 +696,7 @@ const Team = () => {
       name: "Dr. Philippe Martins",
       role: "Advogado | Direito da Mineração – Lima & Martins",
       desc: "Especialista em Direito da Mineração, sócio da Lima & Martins Sociedade de Advogados. Atuação consolidada junto à ANM e amplo domínio do Código de Mineração. Garante segurança jurídica e conformidade legal.",
-      email: "pmartins@safemining.com",
+      email: "pmartins@safeminingse.com",
       phone: "(31) 99168-6298",
       icon: <Briefcase className="w-6 h-6" />
     }
@@ -924,7 +924,7 @@ const Contact = () => {
                 <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
                   <Mail className="w-3.5 h-3.5" />
                   <span className="text-xs text-white/70">
-                    iraclezia@safemining.com
+                    iraclezia@safeminingse.com
                   </span>
                 </div>
               </div>
@@ -941,7 +941,7 @@ const Contact = () => {
                 <div className="flex items-center space-x-3 ml-7 text-brand-accent/70">
                   <Mail className="w-3.5 h-3.5" />
                   <span className="text-xs text-white/70">
-                    pmartins@safemining.com
+                    pmartins@safeminingse.com
                   </span>
                 </div>
               </div>
