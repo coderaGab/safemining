@@ -1140,24 +1140,32 @@ const Footer = () => {
 
 export default function App() {
   return (
+    <BrowserRouter>
     <div className="min-h-screen selection:bg-brand-accent selection:text-brand-bg scroll-smooth">
       <Navbar />
-      <AnimatePresence mode="wait">
-        <motion.main
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Hero />
-          <About />
-          <Services />
-          <Differentials />
-          <Technology />
-          <Risks />
-          <Team />
-          <Contact />
-        </motion.main>
-      </AnimatePresence>
+      <Routes>
+  <Route path="/" element={
+    <AnimatePresence mode="wait">
+      <motion.main
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Hero />
+        <About />
+        <Services />
+        <Differentials />
+        <Technology />
+        <Risks />
+        <Team />
+        <Contact />
+      </motion.main>
+    </AnimatePresence>
+  } />
+
+  <Route path="/privacidade" element={<Privacidade />} />
+  <Route path="/termos" element={<Termos />} />
+</Routes>
       <Footer />
     </div>
   );
