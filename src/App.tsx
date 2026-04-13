@@ -6,9 +6,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Linkedin } from "lucide-react";
-import React from "react";
-import Privacidade from "./pages/Privacidade";
-import Termos from "./pages/Termos";
+import Privacidade from "./Privacidade";
+import Termos from "./Termos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { 
   ArrowRight, 
