@@ -822,7 +822,7 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contato" className="bg-brand-bg text-brand-text py-24 border-t border-white/5">
+    <section id="contact" className="bg-brand-bg text-brand-text py-24 border-t border-white/5">
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
